@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+motor
+pillow
+numpy
+faiss-cpu
+insightface
+python-multipart
+social-analyzer

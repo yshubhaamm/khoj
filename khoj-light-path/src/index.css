@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Khoj AI Brand Colors */
+    --primary: 222 75% 33%; /* Royal Blue #1a3c8f */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 222 75% 45%;
+
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 222 75% 33%;
+
+    --accent: 14 100% 64%; /* Sunset Orange #ff7043 */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 14 100% 74%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 75% 33%;
+
+    /* Design System */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(var(--primary) / 0.1);
+    --shadow-accent: 0 10px 25px -5px hsl(var(--accent) / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Hero Button Variant */
+  .btn-hero {
+    @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground 
+           rounded-full px-8 py-4 text-lg font-semibold
+           shadow-[var(--shadow-accent)] hover:shadow-[var(--shadow-hero)]
+           transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Primary Button Variant */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground
+           rounded-lg px-6 py-3 font-medium
+           shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hero)]
+           transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transform hover:scale-105 hover:shadow-[var(--shadow-card)]
+           transition-all duration-300;
+  }
+
+  /* Step Card Animation */
+  .step-card {
+    @apply bg-card rounded-xl p-6 border border-border
+           transform hover:scale-105 hover:shadow-[var(--shadow-card)]
+           transition-all duration-300;
+  }
+
+  /* Counter Animation */
+  .counter {
+    @apply text-4xl font-bold bg-gradient-to-r from-primary to-primary-glow
+           bg-clip-text text-transparent;
+  }
+
+  /* Demo Upload Area */
+  .upload-area {
+    @apply border-2 border-dashed border-primary/30 rounded-lg p-8
+           hover:border-primary/60 hover:bg-primary/5
+           transition-all duration-300 cursor-pointer;
+  }
+  .ai-card-box {
+  position: relative;
+  background: linear-gradient(120deg, #e3f2fd, #bbdefb, #90caf9, #e3f2fd);
+  background-size: 400% 400%;
+  border-radius: 1.3rem;
+  border: 10px solid #90caf9;                   /* THICK border */
+  padding: 0;
+  box-shadow: 0 2px 16px rgba(144,202,249,0.13); 
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, background-position 8s;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.ai-card-box:hover {
+  border-color: #2196f3;
+  box-shadow: 0 16px 48px 12px rgba(144,202,249,0.19);
+  cursor: pointer;
+  transform: translateY(-6px);
+}
+
+.ai-card-box::before,
+.ai-card-box::after {
+  display: none;
+}
+}
+
+.card-hover {
+  position: relative;
+  background: linear-gradient(120deg, #e3f2fd, #bbdefb, #90caf9, #e3f2fd);
+  background-size: 400% 400%;
+  border-radius: 1.3rem;
+  border: 10px solid #90caf9;          /* Thick, soft pastel blue border */
+  padding: 0;
+  box-shadow: 0 2px 16px rgba(144,202,249,0.13); /* Soft shadow */
+  backdrop-filter: blur(16px);         /* Glass effect */
+  -webkit-backdrop-filter: blur(16px);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, background-position 8s;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.card-hover:hover {
+  border-color: #2196f3;                /* Hover: richer blue */
+  box-shadow: 0 16px 48px 10px rgba(144,202,249,0.19); /* Bigger soft shadow */
+  cursor: pointer;
+  transform: translateY(-6px);
+}
+

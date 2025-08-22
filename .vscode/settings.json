@@ -1,0 +1,6 @@
+{
+  "python.analysis.extraPaths": [
+    "C:\\Users\\imshu\\Desktop\\khoj_backend\\.venv\\Lib\\site-packages",
+    "C:\\Users\\imshu\\Desktop\\khoj_backend\\app"
+  ]
+}
