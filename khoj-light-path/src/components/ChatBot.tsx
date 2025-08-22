@@ -4,7 +4,7 @@ const Chatbot = () => {
   useEffect(() => {
     // Check if already initialized
     if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-      // Define window.chatbase function proxy and queue
+     
       window.chatbase = (...args: any) => {
         if (!window.chatbase.q) window.chatbase.q = [];
         window.chatbase.q.push(args);
@@ -19,9 +19,9 @@ const Chatbot = () => {
       // Function to load the embed script
       const onLoad = () => {
         const script = document.createElement("script");
-        script.src = "https://www.chatbase.co/embed.min.js";
-        script.id = "Tg9C-PRO7EuvtllW84mEG";
-        script.setAttribute("domain", "www.chatbase.co");
+        script.src = "";// add your url
+        script.id = "";//add your script id
+        script.setAttribute("", "");
         document.body.appendChild(script);
       };
 
