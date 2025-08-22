@@ -36,8 +36,6 @@ custom_info = {
     "Tom Cruise": "Hollywood actor, Age 63, Florida",
     "Vijay Deverakonda": "Indian actor, Age 36, Hyderabad",
     "Zac Efron": "Hollywood actor, Age 38, California",
-    "Hitesh": "BTech student, Age 20, Karnal, Haryana",
-    "Shubham": "BTech student, Age 21, Karnal, Haryana",
     "Marmik": "BTech student, Age 20, Chandigarh",
     "Kashyap": "BTech student, Age 19, Panipat, Haryana"
 }
