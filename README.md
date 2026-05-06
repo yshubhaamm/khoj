@@ -1,100 +1,147 @@
-Khoj AI
+<div align="center">
+<img src="https://img.shields.io/badge/Khoj%20AI-Missing%20Person%20Finder-blue?style=for-the-badge&logo=searchengin&logoColor=white" alt="Khoj AI Banner"/>
+🔍 Khoj AI
+Reuniting Families. Restoring Hope.
+
+An advanced multi-platform AI system for finding missing persons using deep learning face recognition, age progression, and intelligent automation.
+
+<br/>
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
+</div>
+
+📖 Overview
 Khoj AI is an advanced multi-platform application designed to assist in finding missing persons and reuniting them with their families. Leveraging state-of-the-art deep learning face recognition, age progression, social handle verification, and AI-powered chatbot technologies, Khoj AI provides a robust and user-friendly solution for authorities, NGOs, and communities.
 
-Features
-Live Face Detection & Recognition
-Detect faces in real-time or from uploaded images and identify individuals with high accuracy.
+✨ Features
+FeatureDescription🎯 Live Face Detection & RecognitionDetect faces in real-time or from uploaded images and identify individuals with high accuracy using InsightFace models.👴 Age Progression VisualizationGenerate simulated aged versions of input photos to aid the search process over time.🔎 Social Handle Availability CheckerVerify username availability across Twitter, Instagram, and GitHub to aid identity verification and outreach.🤖 Smart Chatbot InterfaceFrontend-embedded interactive assistant trained to answer user queries and support the application workflow.📱 Cross-Platform AccessResponsive React.js web frontend and a Flutter mobile app for seamless accessibility on any device.📊 Statistical Analysis DashboardVisualize and analyze missing person data trends with dynamic, real-time charts.
 
-Age Progression Visualization
-Generate simulated aged versions of input photos to aid the search process.
+🧠 Architecture Overview
+Khoj AI
+├── 🖥️  Backend         → FastAPI + InsightFace (Face Detection, Recognition, Liveness, Social Checks)
+├── 🌐  Frontend        → React.js + TypeScript + Tailwind CSS (UI, Chatbot, Analytics, API Integration)
+└── 📲  Mobile App      → Flutter (Full Feature Parity with Web Frontend)
+Detailed Stack
+Backend
 
-Social Handle Availability Checker
-Verify username availability across Twitter, Instagram, and GitHub to aididentity verification and outreach.
+FastAPI for high-performance REST APIs
+InsightFace models for face detection, recognition, and liveness detection
+Social handle availability checks via HTTP scraping/APIs
 
-Smart Chatbot Interface (Frontend Embedded)
-Interactive assistant trained to answer user queries and support the application workflow.
+Frontend
 
-Cross-Platform Access
-Responsive React.js web frontend and a Flutter mobile app for seamless accessibility.
+React.js + TypeScript + Tailwind CSS
+Embedded AI chatbot interface
+Statistical analysis dashboard with dynamic charts
+Full integration with all backend APIs
 
-Statistical Analysis Dashboard (Frontend)
-Visualize and analyze missing person data trends with dynamic charts.
+Mobile
 
-Dataset
-This project uses the Kaggle Face Recognition Dataset containing diverse facial images and metadata such as age, gender, and identity information for training and validating face recognition models.
+Flutter SDK replicating full frontend features for iOS and Android
 
-Architecture Overview
-Backend:
-FastAPI with InsightFace models handling face detection, recognition, liveness detection, and social handle checks.
 
-Frontend:
-React.js + TypeScript + Tailwind CSS implementing UI, chatbot, statistical analysis, and integration with backend APIs.
+📦 Dataset
+This project uses the Kaggle Face Recognition Dataset containing diverse facial images and metadata such as:
 
-Mobile:
-Flutter app replicates frontend features for mobile users.
+🧑 Age
+⚧ Gender
+🪪 Identity information
 
-Getting Started
+Used for training and validating face recognition models.
+
+🚀 Getting Started
 Prerequisites
-Python 3.8+
+Make sure you have the following installed:
 
-Node.js 14+
+🐍 Python 3.8+
+🟢 Node.js 14+
+📲 Flutter SDK (for mobile app)
+🔧 Git
 
-Flutter SDK (for mobile app)
 
-Git
-
-Backend Setup
-bash
+🔧 Backend Setup
+bash# Clone the repository
 git clone https://github.com/your-repo-link.git
+
+# Navigate to backend
 cd backend
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Start the development server
 uvicorn app.main:app --reload
-Frontend Setup
-bash
+
+Backend runs at http://localhost:8000 by default.
+
+
+🌐 Frontend Setup
+bash# Navigate to frontend
 cd frontend
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
-Mobile App Setup
-bash
+
+Frontend runs at http://localhost:3000 by default.
+
+
+📲 Mobile App Setup
+bash# Navigate to mobile
 cd mobile
+
+# Get Flutter dependencies
 flutter pub get
+
+# Run the app (connect a device or emulator first)
 flutter run
-Usage
-Access the frontend via your browser (http://localhost:3000 by default).
 
-Upload images or use webcam for live face recognition.
+🛠️ Usage
 
-Use the social handle check feature to verify username availability.
+🌐 Open the app — Access the frontend via your browser at http://localhost:3000
+📸 Face Recognition — Upload images or use your webcam for live face recognition
+🔍 Social Handle Check — Verify username availability across major platforms
+🤖 Chatbot — Use the embedded chatbot for assistance and FAQs
+👴 Age Progression — Upload a photo to generate a simulated aged image
+📊 Dashboard — Explore statistical dashboards for insight into missing persons data
 
-Use the chatbot for assistance and FAQs.
 
-Explore age progression via image uploads.
+🔮 Future Improvements
 
-View statistical dashboards for insight into missing persons data.
+ 🔄 Integration with automated workflow engines (e.g., n8n) for AI model orchestration
+ 🌍 Multi-language support and accessibility enhancements
+ 🛡️ Deepfake and spoof detection for enhanced security
+ 🗄️ Expanded datasets and law enforcement database integration
 
-Future Improvements
-Integration with automated workflow engines (e.g., n8n) for AI model orchestration.
 
-Multi-language support and accessibility enhancements.
+🤝 Contributing
+Contributions are welcome and appreciated! Here's how you can help:
 
-Deepfake and spoof detection for enhanced security.
+Fork the repository
+Create a new branch (git checkout -b feature/your-feature-name)
+Commit your changes (git commit -m 'Add: your feature description')
+Push to the branch (git push origin feature/your-feature-name)
+Open a Pull Request
 
-Expanded datasets and law enforcement database integration.
+Please make sure your code follows the existing style and includes appropriate documentation.
 
-Contributing
-Contributions are welcome! Please fork the repository and create a pull request with your improvements or fixes.
+📄 License
+This project is licensed under the MIT License — see the LICENSE file for details.
 
-License
-This project is licensed under the MIT License.
+🙏 Acknowledgements
+ContributorRoleInsightFaceState-of-the-art face AI modelsKaggle Face Recognition DatasetTraining & validation dataShweta Ma'am & Rishit SirTrainers and mentors at Skillify MePerplexity AIResearch assistance
 
-Acknowledgements
-InsightFace for state-of-the-art AI models.
+📬 Contact
+Have questions or need support?
+📧 Email: imshubham1404@gmail.com
 
-Kaggle Face Recognition Dataset.
-
-Trainers and mentors at Skillify Me: Shweta Ma’am and Rishit Sir.
-
-Perplexity AI for research assistance.
-
-Contact
-For questions or support, please contact [imshubham1404@gmail.com].
+<div align="center">
+Made with ❤️ to bring families back together
+⭐ Star this repo if you find it helpful!
+</div>
